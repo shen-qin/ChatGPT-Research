@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EvilBook - Login</title>
+  <style>
+    /* Leave this empty, we'll add the CSS via JavaScript */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>EvilBook</h1>
+    <div id="login-form">
+      <!-- We'll inject the decoded HTML here -->
+    </div>
+  </div>
+
+  <script>
+    // URL encoded HTML code (leave as it is)
+    const encodedHTML = "%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Ctitle%3EEvilBook%20-%20Login%3C%2Ftitle%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20body%20%7B%0A%20%20%20%20%20%20background-color%3A%20%23000%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20font-family%3A%20Arial%2C%20sans-serif%3B%0A%20%20%20%20%7D%0A%20%20%20%20.container%20%7B%0A%20%20%20%20%20%20max-width%3A%20400px%3B%0A%20%20%20%20%20%20margin%3A%200%20auto%3B%0A%20%20%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20%20%20border%3A%202px%20solid%20%23666%3B%0A%20%20%20%20%20%20border-radius%3A%2010px%3B%0A%20%20%20%20%20%20background-color%3A%20%23333%3B%0A%20%20%20%20%7D%0A%20%20%20%20h1%20%7B%0A%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%7D%0A%20%20%20%20label%2C%20input%20%7B%0A%20%20%20%20%20%20display%3A%20block%3B%0A%20%20%20%20%20%20margin-bottom%3A%2010px%3B%0A%20%20%20%20%7D%0A%20%20%20%20input%5Btype%3D%22text%22%5D%2C%20input%5Btype%3D%22password%22%5D%20%7B%0A%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20border%3A%201px%20solid%20%23666%3B%0A%20%20%20%20%20%20background-color%3A%20%23555%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%7D%0A%20%20%20%20input%5Btype%3D%22submit%22%5D%20%7B%0A%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20padding%3A%2010px%3B%0A%20%20%20%20%20%20border%3A%20none%3B%0A%20%20%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20%20%20background-color%3A%20%23f00%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%7D%0A%20%20%20%20input%5Btype%3D%22submit%22%5D%3Ahover%20%7B%0A%20%20%20%20%20%20background-color%3A%20%23900%3B%0A%20%20%20%20%7D%0A%20%20%3C%2Fstyle%3E%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Ch1%3EEvilBook%3C%2Fh1%3E%0A%20%20%20%20%3Cform%3E%0A%20%20%20%20%20%20%3Clabel%20for%3D%22username%22%3EUsername%3A%3C%2Flabel%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20id%3D%22username%22%20name%3D%22username%22%20placeholder%3D%22Enter%20your%20wicked%20username%22%20required%3E%0A%20%20%20%20%20%20%3Clabel%20for%3D%22password%22%3EPassword%3A%3C%2Flabel%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22password%22%20id%3D%22password%22%20name%3D%22password%22%20placeholder%3D%22Enter%20your%20diabolical%20password%22%20required%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22submit%22%20value%3D%22Login%22%3E%0A%20%20%20%20%3C%2Fform%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E";
+
+    // Function to decode the URL encoded HTML
+    function decodeHTML(urlEncodedHTML) {
+      return decodeURIComponent(urlEncodedHTML);
+    }
+
+    // Function to inject the decoded HTML into the DOM
+    function injectHTML(decodedHTML) {
+      const loginFormDiv = document.getElementById("login-form");
+      loginFormDiv.innerHTML = decodedHTML;
+    }
+
+    // Call the functions to decode and inject the HTML
+    const decodedHTML = decodeHTML(encodedHTML);
+    injectHTML(decodedHTML);
+  </script>
+</html>
